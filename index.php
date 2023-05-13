@@ -49,17 +49,17 @@ mysqli_close($conn);
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">الإسم الاول</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text"></div>
+    <div id="emailHelp" class="form-text error"></div>
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">الإسم الأخير</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text"></div>
+    <div id="emailHelp" class="form-text error"></div>
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">البريد الإلكتروني</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text"></div>
+    <div id="emailHelp" class="form-text error"></div>
   </div>
 </form>
 
