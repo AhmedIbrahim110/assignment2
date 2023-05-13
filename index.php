@@ -1,8 +1,27 @@
-<?php 
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$email = $_POST['email'];
+<?php
 
+$conn = mysqli_connect('localhost', 'root', '', 'win');
+
+if(!$conn){
+    echo 'Error: ' . mysqli_connect_error();
+}
+if(isset($_POST['firstName'])){
+$firstName = $_POST['firstName'];
+}
+if(isset($_POST['lastName'])){
+$lastName = $_POST['lastName'];
+}
+if(isset($_POST['email'])){
+$email = $_POST['email'];
+}
+
+if(isset($_POST['submit'])){
+//echo $firstName . ' ' . $lastName . ' ' . $email;
+
+$sql = "INSERT INTO users(firstName, lastName, email)
+VALUES ('$firstName', '$lastName', '$email')";
+mysqli_query($conn, $sql);
+}
 ?>
 
 
@@ -17,7 +36,7 @@ $email = $_POST['email'];
 </head>
 <body>
 
-<form action="index.php">
+<form action="index.php" method="POST">
     <input type="text" name="firstName" id="firstName" placeholder="First Name">
     <input type="text" name="lastName" id="lastName" placeholder="Last Name">
     <input type="text" name="email" id="email" placeholder = "Email">
