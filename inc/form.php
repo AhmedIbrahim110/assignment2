@@ -12,6 +12,12 @@ if(isset($_POST['firstName'])){
 
     
 if(isset($_POST['submit'])){
+
+
+    $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
+    $lastName =  mysqli_real_escape_string($conn, $_POST['lastName']);
+    $email =     mysqli_real_escape_string($conn, $_POST['email']);
+
     $sql = "INSERT INTO users(firstName, lastName, email)
     VALUES ('$firstName', '$lastName', '$email')";
 
