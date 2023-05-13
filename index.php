@@ -2,13 +2,9 @@
 
 include'./inc/conn.php';
 include'./inc/form.php';
-
-$sql = 'SELECT * FROM users';
-$result = mysqli_query($conn, $sql);
-$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+include'./inc/select.php'
 
 
-include'./inc/db_close.php';
 ?>
 
 
@@ -27,7 +23,7 @@ include'./inc/db_close.php';
 
 <body>
     <div class="container">
-<!---
+
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <div class="col-md-5 p-lg-5 mx-auto my-5">
       <h1 class="display-4 fw-normal">اربح مع احمد</h1>
@@ -40,7 +36,7 @@ include'./inc/db_close.php';
   <li class="list-group-item">تابع عالفيسبوك</li>
   <li class="list-group-item">السحب سيكون عشوائي</li>
 </ul>
--->
+
 <form class="mt-5" action="index.php" method="POST">
 <h3>الرجاء ادخال معلوماتك</h3>
   <div class="mb-3">
