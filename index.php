@@ -8,10 +8,7 @@ $result = mysqli_query($conn, $sql);
 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-
-mysqli_free_result($result);
-mysqli_close($conn);
-
+include'./inc/db_close.php';
 ?>
 
 
@@ -65,11 +62,11 @@ mysqli_close($conn);
 </form>
 
 </div>
-<!----
+
 <?php foreach($users as $user): ?>
     <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h1>
 <?php endforeach; ?>
---->
+
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
