@@ -16,7 +16,8 @@ mysqli_close($conn);
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +26,44 @@ mysqli_close($conn);
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
+
 <body>
+    <div class="container">
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">اربح مع احمد</h1>
+      <p class="lead fw-normal">باقي على فتح التسجيل</p>
+      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+  </div>
+
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item">تابع عالفيسبوك</li>
+  <li class="list-group-item">السحب سيكون عشوائي</li>
+</ul>
+
+<form class="mt-5">
+<h3>الرجاء ادخال معلوماتك</h3>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">الإسم الاول</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">الإسم الأخير</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">البريد الإلكتروني</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+</form>
+
+</div>
 
 <form action="index.php" method="POST">
     <input type="text" name="firstName" id="firstName" placeholder="First Name">
