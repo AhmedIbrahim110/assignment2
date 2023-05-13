@@ -15,7 +15,7 @@ include'./inc/select.php'
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -60,17 +60,58 @@ include'./inc/select.php'
     <div id="emailHelp" class="form-text error"><?php echo $errors['emailError'] ?></div>
     <button type ="submit" name="submit" class="btn btn-primary">ارسال المعلومات</button>
   </div>
-
 </form>
 </div>
-  </div>
+</div>
 
 </div>
-<!---
-<?php foreach($users as $user): ?>
-    <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h1>
-<?php endforeach; ?>
---->
+   <div class="d-grid gap-2 col-6 mx-auto my-5">
+<button id="winner" type="button">اختيار الرابح</button>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h5 class="modal-title" id="exampleModalLabel">الرابح في المسابقة</h5>
+
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      <?php foreach($users as $user): ?>
+        <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName'])?></h1>
+        <?php endforeach; ?>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div id="cards" class="row mb-5 pb-5">
+
+  <div class="col-sm-6">
+    <div class ="card my-2 bg-light">
+      <div class="card-body">
+    <h6><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h6>
+    </div>
+    </div>
+    </div>
+
+</div>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>

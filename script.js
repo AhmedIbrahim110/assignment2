@@ -14,3 +14,10 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "لقد وصلت متأخرا";
   }
 }, 1000);
+
+// برمجية اختيار الرابح
+const win = document.querySelector("#winner");
+const cards = document.querySelector("#cards");
+win.addEventListener('click', function(){
+  cards.style.display = 'flex';
+})
