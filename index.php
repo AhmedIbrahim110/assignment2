@@ -21,6 +21,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -36,7 +37,7 @@ mysqli_close($conn);
     <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h1>
 <?php endforeach; ?>
     
-
+<script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>
