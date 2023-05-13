@@ -1,28 +1,8 @@
 <?php
 
 include'./inc/conn.php';
+include'./inc/form.php';
 
-if(isset($_POST['firstName'])){
-$firstName = $_POST['firstName'];
-}
-if(isset($_POST['lastName'])){
-$lastName = $_POST['lastName'];
-}
-if(isset($_POST['email'])){
-$email = $_POST['email'];
-}
-
-if(isset($_POST['submit'])){
-//echo $firstName . ' ' . $lastName . ' ' . $email;
-
-$sql = "INSERT INTO users(firstName, lastName, email)
-VALUES ('$firstName', '$lastName', '$email')";
-if(mysqli_query($conn, $sql)){
-    header('Location: index.php');
-}else{
-    echo 'Error: ' . mysqli_error($conn);
-}
-}
 ?>
 
 
