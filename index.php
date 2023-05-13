@@ -1,10 +1,7 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'win');
+include'./inc/conn.php';
 
-if(!$conn){
-    echo 'Error: ' . mysqli_connect_error();
-}
 if(isset($_POST['firstName'])){
 $firstName = $_POST['firstName'];
 }
@@ -20,7 +17,11 @@ if(isset($_POST['submit'])){
 
 $sql = "INSERT INTO users(firstName, lastName, email)
 VALUES ('$firstName', '$lastName', '$email')";
-mysqli_query($conn, $sql);
+if(mysqli_query($conn, $sql)){
+    header('Location: index.php');
+}else{
+    echo 'Error: ' . mysqli_error($conn);
+}
 }
 ?>
 
