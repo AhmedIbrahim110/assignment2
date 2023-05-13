@@ -17,7 +17,15 @@ var x = setInterval(function() {
 
 // برمجية اختيار الرابح
 const win = document.querySelector("#winner");
-const cards = document.querySelector("#cards");
-win.addEventListener('click', function(){
-  cards.style.display = 'flex';
+
+var myModal = new bootstrap.Modal(document.getElementById('myModal'),{
+  keyboard: false
 })
+
+win.addEventListener('click', function(){
+  setTimeout(function(){
+    myModal.show();
+  },1000);
+});
+
+

@@ -31,12 +31,12 @@ include'./inc/select.php'
       <a class="btn btn-outline-secondary" href="#">Coming soon</a>
     </div>
   </div>
-<!---
+
   <ul class="list-group list-group-flush">
   <li class="list-group-item">تابع عالفيسبوك</li>
   <li class="list-group-item">السحب سيكون عشوائي</li>
 </ul>
---->
+
 <div class="position-relativetext-center">
     <div class="col-md-5 p-lg-5 mx-auto my-5">
 <form class="mt-5" action="index.php" method="POST">
@@ -65,23 +65,23 @@ include'./inc/select.php'
 </div>
 
 </div>
-   <div class="d-grid gap-2 col-6 mx-auto my-5">
-<button id="winner" type="button">اختيار الرابح</button>
-
+  
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+<div class="d-grid gap-2 col-6 mx-auto my-5">
+<button type="button" id="winner" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+  اختيار الرابح
 </button>
+</div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         
-        <h5 class="modal-title" id="exampleModalLabel">الرابح في المسابقة</h5>
+        <h5 class="modal-title" id="modalLabel">الرابح في المسابقة</h5>
 
 
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -89,7 +89,7 @@ include'./inc/select.php'
       <div class="modal-body">
 
       <?php foreach($users as $user): ?>
-        <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName'])?></h1>
+        <h1 class="display-3 text-center modal-title"><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName'])?></h1>
         <?php endforeach; ?>
 
       </div>
@@ -99,17 +99,6 @@ include'./inc/select.php'
 </div>
 
 
-
-</div>
-<div id="cards" class="row mb-5 pb-5">
-
-  <div class="col-sm-6">
-    <div class ="card my-2 bg-light">
-      <div class="card-body">
-    <h6><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h6>
-    </div>
-    </div>
-    </div>
 
 </div>
 <script src="./js/bootstrap.bundle.min.js"></script>
