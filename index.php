@@ -4,7 +4,6 @@ include'./inc/conn.php';
 include'./inc/form.php';
 include'./inc/select.php'
 
-
 ?>
 
 
@@ -31,39 +30,47 @@ include'./inc/select.php'
       <a class="btn btn-outline-secondary" href="#">Coming soon</a>
     </div>
   </div>
-
+<!---
   <ul class="list-group list-group-flush">
   <li class="list-group-item">تابع عالفيسبوك</li>
   <li class="list-group-item">السحب سيكون عشوائي</li>
 </ul>
-
+--->
+<div class="position-relativetext-center">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
 <form class="mt-5" action="index.php" method="POST">
 <h3>الرجاء ادخال معلوماتك</h3>
+
   <div class="mb-3">
     <label for="firstName" class="form-label">الإسم الاول</label>
     <input type="text" name="firstName" class="form-control" id="firstName">
     <div id="emailHelp" class="form-text error"><?php echo $errors['firstNameError'] ?></div>
   </div>
+
   <div class="mb-3">
     <label for="lastName" class="form-label">الإسم الأخير</label>
     <input type="text" name="lastName" class="form-control" id="lastName">
     <div id="emailHelp" class="form-text error"><?php echo $errors['lastNameError'] ?></div>
   </div>
+
   <div class="mb-3">
     <label for="email" class="form-label">البريد الإلكتروني</label>
     <input type="text" name="email" class="form-control" id="email">
     <div id="emailHelp" class="form-text error"><?php echo $errors['emailError'] ?></div>
     <button type ="submit" name="submit" class="btn btn-primary">ارسال المعلومات</button>
   </div>
+
 </form>
+</div>
+  </div>
 
 </div>
-
+<!---
 <?php foreach($users as $user): ?>
     <h1><?php echo htmlspecialchars($user['firstName']) . ' ' . htmlspecialchars($user['lastName']) . '<br>' . htmlspecialchars($user['email'])?></h1>
 <?php endforeach; ?>
-
+--->
 <script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
